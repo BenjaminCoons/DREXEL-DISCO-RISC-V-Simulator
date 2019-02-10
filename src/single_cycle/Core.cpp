@@ -11,6 +11,83 @@ Core::Core(const string &fname, ofstream *out) : out(out),
 /*
 	TODO - Add more functions and modify tick() to simulate single-cycle RISC-V architecture
 */
+
+uint64_t Core::add64(uint64_t a, uint64_t b){
+	uint64_t result;
+	result = a + b;
+
+	return result;
+}
+
+uint64_t Core::mux64(uint64_t a, uint64_t b, bool s){
+	if(s){
+		return a;
+	} else {
+		return b;
+	}
+}
+
+uint64_t Core::lshift64(uint64_t a, uint8_t s = 1){
+	uint64_t shifted_result;
+
+	shifted_result = a << s;
+
+	return shifted_result;	
+}
+
+bool Core::and_gate(bool a, bool b){
+	bool and_result;
+
+	and_result = a & b;
+
+	return and_result;
+}
+
+void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
+		uint8_t *aluop, bool *memwrite, bool *alusource, bool *regwrite){
+
+
+	// R-Format
+	if(instr == 0x0033 || instr == 0x003B){
+		*branch = 0;
+		*memread = 0;
+		*memtoreg = 0;
+		*aluop = 0x0002;
+		*memwrite = 0;
+		*alusource = 0;
+		*regwrite = 1;
+
+	// I-Format
+	} else if (instr == 0x0002 || instr == 0x000F || instr == 0x0013 || instr == 0x0033){
+		*branch = 0;
+		*memread = 1;
+		*memtoreg = 1;
+		*aluop = 0x0000;
+		*memwrite = 0;
+		*alusource = 1;
+		*regwrite = 1;
+
+	// S-Format
+	} else if (instr == 0x0023){
+		*branch = 0;
+		*memread = 0;
+		*aluop = 0x0000;
+		*memwrite = 1;
+		*alusource = 1;
+		*regwrite = 0;
+
+	// U-Format
+	} else if (instr == 0x0063){
+		*branch = 1;
+		*memread = 0;
+		*aluop = 0x0001;
+		*memwrite = 0;
+		*alusource = 0;
+		*regwrite = 0;
+	}
+
+}
+
 bool Core::tick()
 {
 	/*
