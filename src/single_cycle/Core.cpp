@@ -76,7 +76,7 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 		*alusource = 1;
 		*regwrite = 0;
 
-	// U-Format
+	// SB-Format
 	} else if (instr == 0x0063){
 		*branch = 1;
 		*memread = 0;
@@ -85,6 +85,16 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 		*alusource = 0;
 		*regwrite = 0;
 	}
+
+}
+
+void imem(uint32_t addr, uint8_t *control, uint8_t *read1, uint8_t *read2, uint8_t *write, uint32_t *immgen){
+
+	*control = (addr & 0x0007);
+	*write = (addr >> 7) & 0x0005; 
+	*read1 = (addr >> 15) & 0x0005;
+	*read2 = (addr >> 20) & 0x0005;
+	*immgen = addr;
 
 }
 
@@ -165,6 +175,9 @@ uint64_t Core::immgen(uint32_t instr)
 	else
 		return uint64_t(instr);
 }
+
+
+
 
 uint8_t Core::alu_control(uint8_t aluop, uint8_t func3, uint8_t func7)
 {
