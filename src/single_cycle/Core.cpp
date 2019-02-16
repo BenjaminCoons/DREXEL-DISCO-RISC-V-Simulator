@@ -8,14 +8,9 @@ Core::Core(const string &fname, ofstream *out) : out(out),
 
 }
 
-/*
-	TODO - Add more functions and modify tick() to simulate single-cycle RISC-V architecture
-*/
-
 uint64_t Core::add64(uint64_t a, uint64_t b){
 	uint64_t result;
 	result = a + b;
-
 	return result;
 }
 
@@ -124,7 +119,17 @@ bool Core::tick()
 			Step Three: Simulator related
 		*/
 		instruction.begin_exe = clk;
-		
+		// unsigned int n = 
+		// while (n) {
+	 //    	if (n & 1)
+	 //        	printf("1");
+	 //    	else
+	 //        	printf("0");
+
+	 //    	n >>= 1;
+		// }
+		// printf("\n");
+
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
 	
@@ -170,13 +175,11 @@ void Core::printStats(list<Instruction>::iterator &ite)
 
 uint64_t Core::immgen(uint32_t instr) 
 {
-	if(inst >> 31 & 0b1)
+	if(instr >> 31 & 0b1)
 		return (uint64_t)instr + 0xffffffff00000000;
 	else
 		return uint64_t(instr);
 }
-
-
 
 
 uint8_t Core::alu_control(uint8_t aluop, uint8_t func3, uint8_t func7)
@@ -216,7 +219,7 @@ uint64_t Core::alu(uint64_t a, uint64_t b, uint8_t control, bool *zero)
 }
 
 void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata, 
-		bool rwrite, uint64_t *data1, uint64_t *data2);
+		bool rwrite, uint64_t *data1, uint64_t *data2)
 {
 	*data1 = register_file[reg1];
 	*data2 = register_file[reg2];
@@ -226,6 +229,14 @@ void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata,
 
 uint64_t Core::datmem(uint64_t addr, uint64_t wdata, bool read, bool write) 
 {
-	//HELPME how big is data mem? What is the initial register file? 
+	if(read)
+		return *((uint64_t*)(data_memory+addr));
+	if(write) {
+		// This will store little-endian 64 bit value in 8 8-bit chunks
+		uint8_t i;
+	    for(i = 0; i < 8; i++) {
+	        data_memory[i] = (wdata & (0xffULL << 8*i)) >> 8*i;
+	    }
+	}
 }
 

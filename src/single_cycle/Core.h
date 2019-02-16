@@ -27,7 +27,7 @@ public:
 		instr_mem->printInstr();
 	}
 
-//private:
+private:
 
 	ofstream *out; // Output file
 
@@ -43,11 +43,17 @@ public:
 
 	void printStats(list<Instruction>::iterator &ite);
 
+	// Student CPU Blocks
+
+	uint8_t register_file[32*64];
+
+	uint8_t data_memory[32*64];
+
 	uint64_t add64(uint64_t a, uint64_t b);
 
 	uint64_t mux64(uint64_t a, uint64_t b, bool s);
 
-	uint64_t lshift64(uint64_t a, uint8_t s = 1);
+	uint64_t lshift64(uint64_t a, uint8_t s);
 
 	bool and_gate(bool a, bool b);
 
@@ -63,8 +69,8 @@ public:
 
 	uint64_t alu(uint64_t a, uint64_t b, uint8_t control, bool *zero);
 
-	void reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata, 
-		uint64_t *data1, uint64_t *data2);
+	void reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata,
+		bool rwrite, uint64_t *data1, uint64_t *data2);
 
 	uint64_t datmem(uint64_t addr, uint64_t wdata, bool read, bool write);
 };
