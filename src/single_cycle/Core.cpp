@@ -61,14 +61,16 @@ bool Core::tick() {
 		printf("instr:  "); printbin(instruction.instruction, 32);
 		printf("\n");
 
-		uint8_t ctrl, read1, read2, write;
+		uint8_t ctrl, read1, read2, write, func3, func7;
 		uint32_t ig;
-		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig);
+		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig, &func3, &func7);
 		printf("ctrl:   "); printbin(ctrl, 7);
 		printf("read1:  "); printbin(read1, 5);
 		printf("read2:  "); printbin(read2, 5);
 		printf("write:  "); printbin(write, 5);
 		printf("immgen: "); printbin(ig, 32);
+		printf("func3:  "); printbin(func3, 3);
+		printf("func7:  "); printbin(func7, 7);
 		printf("\n");
 
 		uint64_t ig_out;
@@ -99,6 +101,12 @@ bool Core::tick() {
 		uint64_t alu_muxin;
 		alu_muxin = mux64(data2, ig_out, alusource);
 		printf("alumux: "); printbin(alu_muxin, 64);
+		printf("\n");
+
+		uint8_t alu_ctrl;
+		alu_ctrl = alu_control(aluop, func3, func7);
+		printf("aluctr: "); printbin(alu_ctrl, 4);
+		printf("\n");
 
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
@@ -229,12 +237,15 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 	}
 }
 
-void Core::imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2, uint8_t *write, uint32_t *immgen){
+void Core::imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2, uint8_t *write, uint32_t *immgen,
+	uint8_t* func3, uint8_t* func7){
 
-	*control = (instr >> 0)     & 0b01111111; 
-	*write   = (instr >> 7)     & 0b00011111; 
-	*read1   = (instr >> 7+3)   & 0b00011111;
-	*read2   = (instr >> 7+3+5) & 0b00011111;
+	*control = (instr >> 0)         & 0b01111111; 
+	*write   = (instr >> 7)         & 0b00011111;
+	*func3   = (instr >> 7+5)       & 0b00000111; 
+	*read1   = (instr >> 7+5+3)     & 0b00011111;
+	*read2   = (instr >> 7+5+3+5)   & 0b00011111;
+	*func7   = (instr >> 7+5+3+5+3) & 0b01111111;
 
 	*immgen  = instr;
 

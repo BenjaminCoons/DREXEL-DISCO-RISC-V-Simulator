@@ -65,7 +65,7 @@ private:
 	uint64_t immgen(uint32_t instr);
 
 	void imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2, 
-		uint8_t *write, uint32_t *immgen);
+		uint8_t *write, uint32_t *immgen, uint8_t *func3, uint8_t *func7);
 
 	uint8_t alu_control(uint8_t aluop, uint8_t func3, uint8_t func7);
 
