@@ -194,7 +194,7 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 			*branch = 0;
 			*memread = 1;
 			*memtoreg = 1;
-			*aluop = 0x0000;
+			*aluop = 0b00;
 			*memwrite = 0;
 			*alusource = 1;
 			*regwrite = 1;
@@ -210,7 +210,7 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 			// S-Format
 			*branch = 0;
 			*memread = 0;
-			*aluop = 0x0000;
+			*aluop = 0b00;
 			*memwrite = 1;
 			*alusource = 1;
 			*regwrite = 0;
@@ -219,7 +219,7 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 			// SB-Format
 			*branch = 1;
 			*memread = 0;
-			*aluop = 0x0001;
+			*aluop = 0b01;
 			*memwrite = 0;
 			*alusource = 0;
 			*regwrite = 0;
@@ -229,7 +229,7 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 			*branch = 0;
 			*memread = 0;
 			*memtoreg = 0;
-			*aluop = 0x0002;
+			*aluop = 0b10;
 			*memwrite = 0;
 			*alusource = 0;
 			*regwrite = 1;
@@ -245,7 +245,7 @@ void Core::imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2
 	*func3   = (instr >> 7+5)       & 0b00000111; 
 	*read1   = (instr >> 7+5+3)     & 0b00011111;
 	*read2   = (instr >> 7+5+3+5)   & 0b00011111;
-	*func7   = (instr >> 7+5+3+5+3) & 0b01111111;
+	*func7   = (instr >> 7+5+3+5+5) & 0b01111111;
 
 	*immgen  = instr;
 
