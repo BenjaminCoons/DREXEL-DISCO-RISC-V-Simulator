@@ -1,11 +1,12 @@
 #include "Core.h"
 
+#define DEBPRNT(x) printf("%s\n", x); fflush(stdout);
+
 Core::Core(const string &fname, ofstream *out) : out(out), 
 						clk(0), 
 						PC(0),
 						instr_mem(new Instruction_Memory(fname))
 {
-
 }
 
 uint64_t Core::add64(uint64_t a, uint64_t b){
@@ -15,11 +16,8 @@ uint64_t Core::add64(uint64_t a, uint64_t b){
 }
 
 uint64_t Core::mux64(uint64_t a, uint64_t b, bool s){
-	if(s){
-		return a;
-	} else {
-		return b;
-	}
+	
+	return s ? a : b;
 }
 
 uint64_t Core::lshift64(uint64_t a, uint8_t s = 1){
@@ -40,7 +38,6 @@ bool Core::and_gate(bool a, bool b){
 
 void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 		uint8_t *aluop, bool *memwrite, bool *alusource, bool *regwrite){
-
 
 	// R-Format
 	if(instr == 0x0033 || instr == 0x003B){
@@ -83,18 +80,38 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 
 }
 
-void imem(uint32_t addr, uint8_t *control, uint8_t *read1, uint8_t *read2, uint8_t *write, uint32_t *immgen){
+void Core::imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2, uint8_t *write, uint32_t *immgen){
 
-	*control = (addr & 0x0007);
-	*write = (addr >> 7) & 0x0005; 
-	*read1 = (addr >> 15) & 0x0005;
-	*read2 = (addr >> 20) & 0x0005;
-	*immgen = addr;
+	*control = (instr >> 0)     & 0b01111111; 
+	*write   = (instr >> 7)     & 0b00011111; 
+	*read1   = (instr >> 7+5)   & 0b00011111;
+	*read2   = (instr >> 7+5+5) & 0b00011111;
+
+	*immgen  = instr;
 
 }
 
-bool Core::tick()
-{
+void Core::printbin(uint64_t n, int c) {
+	int j = c;
+	uint8_t temp[c];
+	while (j-- > 0) {
+    	if (n & 1) {
+        	temp[j] = 1;
+    	}
+    	else{
+        	temp[j] = 0;
+    	}
+
+    	n >>= 1;
+	}
+	uint8_t i;
+	for(i = 0; i < c; i++) {
+		printf("%d", temp[i]);
+	}
+	printf("\n");
+}
+
+bool Core::tick() {
 	/*
 		Step One: Serving pending instructions
 	*/
@@ -119,19 +136,47 @@ bool Core::tick()
 			Step Three: Simulator related
 		*/
 		instruction.begin_exe = clk;
-		// unsigned int n = 
-		// while (n) {
-	 //    	if (n & 1)
-	 //        	printf("1");
-	 //    	else
-	 //        	printf("0");
+		printf("instr:  ");
+		printbin(instruction.instruction, 32);
 
-	 //    	n >>= 1;
-		// }
-		// printf("\n");
+		uint8_t ctrl, read1, read2, write;
+		uint32_t ig;
+		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig);
+		printf("ctrl:   ");
+		printbin(ctrl, 8);
+		printf("read1:  ");
+		printbin(read1, 8);
+		printf("read2:  ");
+		printbin(read2, 8);
+		printf("write:  ");
+		printbin(write, 8);
+		printf("immgen: ");
+		printbin(ig, 32);
+
+		uint64_t ig_out;
+		ig_out = immgen(ig);
+		printf("ig_out: ");
+		printbin(ig_out, 64);
+
+		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
+		uint8_t aluop;
+		control(ctrl, &branch, &memread, &memtoreg, &aluop, &memwrite, 
+			&alusource, &regwrite);
+		printf("branch: %d\n", branch);
+		printf("memrd:  %d\n", memread);
+		printf("mem2rg: %d\n", memtoreg);
+		printf("aluop:  ");
+		printbin(aluop, 8);
+		printf("memwt:  %d\n", memwrite);
+		printf("alusrc: %d\n", alusource);
+		printf("rgwt:   %d\n", regwrite);
+
+		uint64_t data1, data2;
 
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
+
+		printf("\n");
 	
 		pending_queue.push_back(instruction);
 	}
@@ -175,10 +220,45 @@ void Core::printStats(list<Instruction>::iterator &ite)
 
 uint64_t Core::immgen(uint32_t instr) 
 {
-	if(instr >> 31 & 0b1)
-		return (uint64_t)instr + 0xffffffff00000000;
-	else
-		return uint64_t(instr);
+	constexpr uint64_t one_extend = 0xfffffffffffff000ULL;
+	uint64_t temp;
+	switch(instr & 0b1111111) {
+		case 0b0000011:
+		case 0b0001111:
+		case 0b0010011:
+		case 0b0011011:
+		case 0b1100111:
+		case 0b1110011: // I-type
+			temp = (uint64_t)instr >> 20; 
+			if((uint8_t)(temp >> 11) & 0b1)
+				temp |= one_extend;
+			break;
+		case 0b0010111:
+		case 0b0110111: //U-type
+			return 0;  //TODO implement u type
+			break;
+		case 0b1101111: //UJ-type
+			return 0;  //TODO implement uj type
+			break;
+		case 0b0100011: //S-type
+			temp = (((uint64_t)instr >> 7) & 0b11111) 
+			     + (((uint64_t)instr >> 25) << 5); 
+		    if((uint8_t)(temp >> 11) & 0b1)
+				temp |= one_extend;
+			break;
+		case 0b1100011: //SB-type
+			temp = ((((uint64_t)instr >> 8) & 0b1111) << 1)
+			     + ((((uint64_t)instr >> 25) & 0b111111) << 5)
+			     + ((((uint64_t)instr >> 7) & 0b1) << 11)
+			     + (((uint64_t)instr >> 31) << 12); 
+			if((uint8_t)(temp >> 11) & 0b1)
+				temp |= one_extend;
+			break;
+		default:
+			return 0; 
+			break;
+	}
+	return temp;
 }
 
 
@@ -239,4 +319,3 @@ uint64_t Core::datmem(uint64_t addr, uint64_t wdata, bool read, bool write)
 	    }
 	}
 }
-

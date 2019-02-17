@@ -45,15 +45,17 @@ private:
 
 	// Student CPU Blocks
 
-	uint8_t register_file[32*64];
+	uint8_t register_file[32*8];
 
-	uint8_t data_memory[32*64];
+	uint8_t data_memory[32*8];
 
 	uint64_t add64(uint64_t a, uint64_t b);
 
 	uint64_t mux64(uint64_t a, uint64_t b, bool s);
 
 	uint64_t lshift64(uint64_t a, uint8_t s);
+
+	void printbin(uint64_t n, int c);
 
 	bool and_gate(bool a, bool b);
 
@@ -62,7 +64,7 @@ private:
 
 	uint64_t immgen(uint32_t instr);
 
-	void imem(uint32_t addr, uint8_t *control, uint8_t *read1, uint8_t *read2, 
+	void imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2, 
 		uint8_t *write, uint32_t *immgen);
 
 	uint8_t alu_control(uint8_t aluop, uint8_t func3, uint8_t func7);
