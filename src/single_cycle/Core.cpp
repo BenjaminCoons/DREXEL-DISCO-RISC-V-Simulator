@@ -7,6 +7,9 @@ Core::Core(const string &fname, ofstream *out) : out(out),
 						PC(0),
 						instr_mem(new Instruction_Memory(fname))
 {
+	int i;
+	for(i = 0; i < 32*8; i++) register_file[i] = 0;
+	for(i = 0; i < 32*8; i++) data_memory[i] = 0;
 }
 
 uint64_t Core::add64(uint64_t a, uint64_t b){
@@ -136,47 +139,47 @@ bool Core::tick() {
 			Step Three: Simulator related
 		*/
 		instruction.begin_exe = clk;
-		printf("instr:  ");
-		printbin(instruction.instruction, 32);
+		printf("instr:  "); printbin(instruction.instruction, 32);
+		printf("\n");
 
 		uint8_t ctrl, read1, read2, write;
 		uint32_t ig;
 		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig);
-		printf("ctrl:   ");
-		printbin(ctrl, 8);
-		printf("read1:  ");
-		printbin(read1, 8);
-		printf("read2:  ");
-		printbin(read2, 8);
-		printf("write:  ");
-		printbin(write, 8);
-		printf("immgen: ");
-		printbin(ig, 32);
+		printf("ctrl:   "); printbin(ctrl, 7);
+		printf("read1:  "); printbin(read1, 5);
+		printf("read2:  "); printbin(read2, 5);
+		printf("write:  "); printbin(write, 5);
+		printf("immgen: "); printbin(ig, 32);
+		printf("\n");
 
 		uint64_t ig_out;
 		ig_out = immgen(ig);
 		printf("ig_out: ");
 		printbin(ig_out, 64);
+		printf("\n");
 
 		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
 		uint8_t aluop;
 		control(ctrl, &branch, &memread, &memtoreg, &aluop, &memwrite, 
 			&alusource, &regwrite);
-		printf("branch: %d\n", branch);
-		printf("memrd:  %d\n", memread);
-		printf("mem2rg: %d\n", memtoreg);
-		printf("aluop:  ");
-		printbin(aluop, 8);
-		printf("memwt:  %d\n", memwrite);
-		printf("alusrc: %d\n", alusource);
-		printf("rgwt:   %d\n", regwrite);
+		printf("branch: "); printbin(branch, 1);
+		printf("memrd:  "); printbin(memread, 1);
+		printf("mem2rg: "); printbin(memtoreg, 1);
+		printf("aluop:  "); printbin(aluop, 2);
+		printf("memwt:  "); printbin(memwrite, 1);
+		printf("alusrc: "); printbin(alusource, 1);
+		printf("rgwt:   "); printbin(regwrite, 1);
 
-		uint64_t data1, data2;
+		uint64_t data1, data2, wdata;
+		reg(read1, read2, write, wdata, regwrite, &data1, &data1);
+		printf("data1:  "); printbin(data1, 64);
+		printf("data2:  "); printbin(data2, 64);
+
 
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
 
-		printf("\n");
+		printf("===========================================================================\n");
 	
 		pending_queue.push_back(instruction);
 	}
@@ -301,10 +304,15 @@ uint64_t Core::alu(uint64_t a, uint64_t b, uint8_t control, bool *zero)
 void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata, 
 		bool rwrite, uint64_t *data1, uint64_t *data2)
 {
-	*data1 = register_file[reg1];
-	*data2 = register_file[reg2];
-	if(rwrite)
-		register_file[wreg] = wdata;
+	*data1 = *((uint64_t*)(register_file+reg1));
+	*data2 = *((uint64_t*)(register_file+reg2));
+	if(rwrite){
+		// This will store little-endian 64 bit value in 8 8-bit chunks
+		uint8_t i;
+	    for(i = 0; i < 8; i++) {
+	        register_file[i] = (wdata & (0xffULL << 8*i)) >> 8*i;
+	    }
+	}
 }
 
 uint64_t Core::datmem(uint64_t addr, uint64_t wdata, bool read, bool write) 
