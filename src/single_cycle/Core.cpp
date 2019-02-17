@@ -55,10 +55,12 @@ bool Core::tick() {
 		*/
 
 		instruction.begin_exe = clk;
+		// initial addr and instruction
 		printf("addr:   %d\n", instruction.addr);
 		printf("instr:  "); printbin(instruction.instruction, 32);
 		printf("\n");
 
+		// split instruction into parts
 		uint8_t ctrl, read1, read2, write, func3, func7;
 		uint32_t ig;
 		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig, &func3, &func7);
@@ -71,11 +73,14 @@ bool Core::tick() {
 		printf("func7:  "); printbin(func7, 7);
 		printf("\n");
 
+		// do any immediate processing
 		uint64_t ig_out;
 		ig_out = immgen(ig);
 		printf("ig_out: "); printbin(ig_out, 64);
 		printf("\n");
 
+		// left shift immediate and sum it with PC
+		// just in case we decide to branch later
 		uint64_t ls_ig, pcig_summed;
 		ls_ig = lshift64(ig_out, 1);
 		pcig_summed = add64(PC, ls_ig);
@@ -83,6 +88,7 @@ bool Core::tick() {
 		printf("pcigsm: "); printbin(pcig_summed, 64);
 		printf("\n");
 
+		// figure out what parts of the processor need to be active
 		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
 		uint8_t aluop;
 		control(ctrl, &branch, &memread, &memtoreg, &aluop, &memwrite, 
@@ -96,22 +102,27 @@ bool Core::tick() {
 		printf("rgwt:   "); printbin(regwrite, 1);
 		printf("\n");
 
+		// get the relevant data from src registers
 		uint64_t data1, data2, wdata;
 		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
 		printf("data1:  "); printbin(data1, 64);
 		printf("data2:  "); printbin(data2, 64);
 		printf("\n");
 
+		// mux the immediate value and second register output
+		// depending on the opcode
 		uint64_t alu_muxin;
 		alu_muxin = mux64(data2, ig_out, alusource);
-		printf("alumux: "); printbin(alu_muxin, 64);
+		printf("aluin2: "); printbin(alu_muxin, 64);
 		printf("\n");
 
+		// figure out how to trigger the ALU to do what we need
 		uint8_t alu_ctrl;
 		alu_ctrl = alu_control(aluop, func3, func7);
 		printf("aluctr: "); printbin(alu_ctrl, 4);
 		printf("\n");
 
+		// math it up! run the alu and check for zero result
 		bool zero;
 		uint64_t alu_res;
 		alu_res = alu(data1, alu_muxin, alu_ctrl, &zero);
@@ -119,18 +130,40 @@ bool Core::tick() {
 		printf("zero:   "); printbin(zero, 1); 
 		printf("\n");
 
+		// figure out whether or not we're going to branch
 		uint64_t pc_nxt;
 		pc_nxt = add64(PC, 4);
 		printf("pc_nxt: "); printbin(pc_nxt, 64);
 		printf("\n");
 
-		uint64_t pcmux_s;
+		// Do the actual PC muxing
+		uint64_t pcmux_s, tmppc;
 		pcmux_s = and_gate(branch, zero);
-		printf("pcmux_s: "); printbin(pcmux_s, 1);
-
-		uint64_t tmppc;
 		tmppc = mux64(pc_nxt, pcig_summed, pcmux_s);
-		printf("pc_updt: %d", tmppc);
+		printf("pcmux: "); printbin(pcmux_s, 1);
+		printf("pcupdt: %d", tmppc);
+		printf("\n");
+
+		// retrieve any relevant data from the rest of the 
+		// system's memory
+		uint64_t memval;
+		memval = datmem(alu_res, data2, memread, memwrite);
+		printf("datmem: "); printbin(memval, 64);
+
+		// mux out the data we need to store in a register
+		// if the opcode requires it
+		wdata = mux64(alu_res, memval, memtoreg);
+		printf("wdata:  "); printbin(memval, 64);
+		printf("\n");
+
+		// check in on our register block one more time
+		// and see if we need to write any data
+		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
+		if(regwrite) {
+			printf("writing wdata to reg "); printbin(write, 5);
+		}
+		else
+			printf("no data to be written.\n");
 		printf("\n");
 
 		// Single-cycle always takes one clock cycle to complete
