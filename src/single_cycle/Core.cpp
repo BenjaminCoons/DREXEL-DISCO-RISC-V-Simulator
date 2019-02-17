@@ -153,7 +153,7 @@ uint64_t Core::add64(uint64_t a, uint64_t b){
 
 uint64_t Core::mux64(uint64_t a, uint64_t b, bool s){
 	
-	return s ? a : b;
+	return s ? b : a;
 }
 
 uint64_t Core::lshift64(uint64_t a, uint8_t s = 1){
@@ -175,53 +175,66 @@ bool Core::and_gate(bool a, bool b){
 void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 		uint8_t *aluop, bool *memwrite, bool *alusource, bool *regwrite){
 
-	// R-Format
-	if(instr == 0x0033 || instr == 0x003B){
-		*branch = 0;
-		*memread = 0;
-		*memtoreg = 0;
-		*aluop = 0x0002;
-		*memwrite = 0;
-		*alusource = 0;
-		*regwrite = 1;
-
-	// I-Format
-	} else if (instr == 0x0002 || instr == 0x000F || instr == 0x0013 || instr == 0x0033){
-		*branch = 0;
-		*memread = 1;
-		*memtoreg = 1;
-		*aluop = 0x0000;
-		*memwrite = 0;
-		*alusource = 1;
-		*regwrite = 1;
-
-	// S-Format
-	} else if (instr == 0x0023){
-		*branch = 0;
-		*memread = 0;
-		*aluop = 0x0000;
-		*memwrite = 1;
-		*alusource = 1;
-		*regwrite = 0;
-
-	// SB-Format
-	} else if (instr == 0x0063){
-		*branch = 1;
-		*memread = 0;
-		*aluop = 0x0001;
-		*memwrite = 0;
-		*alusource = 0;
-		*regwrite = 0;
+	switch(instr) {
+		case 0b0000011:
+		case 0b0001111:
+		case 0b0010011:
+		case 0b0011011:
+		case 0b1100111:
+		case 0b1110011: 
+			// I-Format
+			*branch = 0;
+			*memread = 1;
+			*memtoreg = 1;
+			*aluop = 0x0000;
+			*memwrite = 0;
+			*alusource = 1;
+			*regwrite = 1;
+			break;
+		case 0b0010111:
+		case 0b0110111: //U-type
+			return;  //TODO implement u type
+			break;
+		case 0b1101111: //UJ-type
+			return;  //TODO implement uj type
+			break;
+		case 0b0100011: //S-type
+			// S-Format
+			*branch = 0;
+			*memread = 0;
+			*aluop = 0x0000;
+			*memwrite = 1;
+			*alusource = 1;
+			*regwrite = 0;
+			break;
+		case 0b1100011: //SB-type
+			// SB-Format
+			*branch = 1;
+			*memread = 0;
+			*aluop = 0x0001;
+			*memwrite = 0;
+			*alusource = 0;
+			*regwrite = 0;
+			break;
+		default:
+			// R-Format
+			*branch = 0;
+			*memread = 0;
+			*memtoreg = 0;
+			*aluop = 0x0002;
+			*memwrite = 0;
+			*alusource = 0;
+			*regwrite = 1;
+			break;
 	}
-
 }
 
 void Core::imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2, uint8_t *write, uint32_t *immgen){
 
 	*control = (instr >> 0)     & 0b01111111; 
 	*write   = (instr >> 7)     & 0b00011111; 
-	*read1   = (instr >> 7+5)   & 0b00011111;
-	*read2   = (instr >> 7+5+5) & 0b00011111;
+	*read1   = (instr >> 7+3)   & 0b00011111;
+	*read2   = (instr >> 7+3+5) & 0b00011111;
 
 	*immgen  = instr;
 
@@ -318,7 +331,7 @@ void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata,
 		// This will store little-endian 64 bit value in 8 8-bit chunks
 		uint8_t i;
 	    for(i = 0; i < 8; i++) {
-	        (register_file + wreg)[i] = (wdata & (0xffULL << 8*i)) >> 8*i;
+	        register_file[wreg] = (wdata & (0xffULL << 8*i)) >> 8*i;
 	    }
 	}
 }
@@ -331,7 +344,7 @@ uint64_t Core::datmem(uint64_t addr, uint64_t wdata, bool read, bool write)
 		// This will store little-endian 64 bit value in 8 8-bit chunks
 		uint8_t i;
 	    for(i = 0; i < 8; i++) {
-	        data_memory[i] = (wdata & (0xffULL << 8*i)) >> 8*i;
+	        data_memory[addr] = (wdata & (0xffULL << 8*i)) >> 8*i;
 	    }
 	}
 }
