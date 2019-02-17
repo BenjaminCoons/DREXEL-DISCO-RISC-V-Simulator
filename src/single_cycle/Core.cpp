@@ -49,13 +49,11 @@ bool Core::tick() {
 		// Get Instruction
 		Instruction &instruction = instr_mem->get_instruction(PC);
 
-		// Increment PC
-		// TODO, PC should be incremented or decremented based on instruction
-		PC += 4;
 
 		/*
 			Step Three: Simulator related
 		*/
+
 		instruction.begin_exe = clk;
 		printf("addr:   %d\n", instruction.addr);
 		printf("instr:  "); printbin(instruction.instruction, 32);
@@ -75,8 +73,14 @@ bool Core::tick() {
 
 		uint64_t ig_out;
 		ig_out = immgen(ig);
-		printf("ig_out: ");
-		printbin(ig_out, 64);
+		printf("ig_out: "); printbin(ig_out, 64);
+		printf("\n");
+
+		uint64_t ls_ig, pcig_summed;
+		ls_ig = lshift64(ig_out, 1);
+		pcig_summed = add64(PC, ls_ig);
+		printf("ls_ig:  "); printbin(ls_ig, 64);
+		printf("pcigsm: "); printbin(pcig_summed, 64);
 		printf("\n");
 
 		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
@@ -108,9 +112,30 @@ bool Core::tick() {
 		printf("aluctr: "); printbin(alu_ctrl, 4);
 		printf("\n");
 
+		bool zero;
+		uint64_t alu_res;
+		alu_res = alu(data1, alu_muxin, alu_ctrl, &zero);
+		printf("alu_rs: "); printbin(alu_res, 64);
+		printf("zero:   "); printbin(zero, 1); 
+		printf("\n");
+
+		uint64_t pc_nxt;
+		pc_nxt = add64(PC, 4);
+		printf("pc_nxt: "); printbin(pc_nxt, 64);
+		printf("\n");
+
+		uint64_t pcmux_s;
+		pcmux_s = and_gate(branch, zero);
+		printf("pcmux_s: "); printbin(pcmux_s, 1);
+
+		uint64_t tmppc;
+		tmppc = mux64(pc_nxt, pcig_summed, pcmux_s);
+		printf("pc_updt: %d", tmppc);
+		printf("\n");
+
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
-
+		PC += 4;
 		printf("===========================================================================\n");
 	
 		pending_queue.push_back(instruction);
@@ -280,10 +305,11 @@ uint64_t Core::immgen(uint32_t instr)
 				temp |= one_extend;
 			break;
 		case 0b1100011: //SB-type
-			temp = ((((uint64_t)instr >> 8) & 0b1111) << 1)
-			     + ((((uint64_t)instr >> 25) & 0b111111) << 5)
-			     + ((((uint64_t)instr >> 7) & 0b1) << 11)
-			     + (((uint64_t)instr >> 31) << 12); 
+			//1 111111 00000 00000 000 1100 1 1100011
+			temp = ((((uint64_t)instr >> 8) & 0b1111))
+			     + ((((uint64_t)instr >> 25) & 0b111111) << 4)
+			     + ((((uint64_t)instr >> 7) & 0b1) << 10)
+			     + (((uint64_t)instr >> 31) << 11); 
 			if((uint8_t)(temp >> 11) & 0b1)
 				temp |= one_extend;
 			break;

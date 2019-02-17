@@ -31,9 +31,7 @@ private:
 
 	ofstream *out; // Output file
 
-	unsigned long long int clk;
-
-	long PC;
+	uint64_t clk, PC;
 
 	Instruction_Memory *instr_mem;
 
