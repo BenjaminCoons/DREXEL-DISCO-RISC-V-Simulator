@@ -171,10 +171,11 @@ bool Core::tick() {
 		printf("rgwt:   "); printbin(regwrite, 1);
 
 		uint64_t data1, data2, wdata;
-		reg(read1, read2, write, wdata, regwrite, &data1, &data1);
+		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
 		printf("data1:  "); printbin(data1, 64);
 		printf("data2:  "); printbin(data2, 64);
 
+		
 
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
@@ -306,11 +307,13 @@ void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata,
 {
 	*data1 = *((uint64_t*)(register_file+reg1));
 	*data2 = *((uint64_t*)(register_file+reg2));
+
 	if(rwrite){
+    	if(wreg <= 3) return;
 		// This will store little-endian 64 bit value in 8 8-bit chunks
 		uint8_t i;
 	    for(i = 0; i < 8; i++) {
-	        register_file[i] = (wdata & (0xffULL << 8*i)) >> 8*i;
+	        (register_file + wreg)[i] = (wdata & (0xffULL << 8*i)) >> 8*i;
 	    }
 	}
 }
