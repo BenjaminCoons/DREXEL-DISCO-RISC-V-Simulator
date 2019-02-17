@@ -12,6 +12,139 @@ Core::Core(const string &fname, ofstream *out) : out(out),
 	for(i = 0; i < 32*8; i++) data_memory[i] = 0;
 }
 
+void Core::printbin(uint64_t n, int c) {
+	int j = c;
+	uint8_t temp[c];
+	while (j-- > 0) {
+    	if (n & 1) {
+        	temp[j] = 1;
+    	}
+    	else{
+        	temp[j] = 0;
+    	}
+
+    	n >>= 1;
+	}
+	uint8_t i;
+	for(i = 0; i < c; i++) {
+		printf("%d", temp[i]);
+	}
+	printf("\n");
+}
+
+bool Core::tick() {
+	/*
+		Step One: Serving pending instructions
+	*/
+	if (pending_queue.size() > 0)
+	{
+		serve_pending_instrs();
+	}
+	
+	/*
+		Step Two: Where simulation happens
+	*/
+	if (PC <= instr_mem->last_addr())
+	{
+		// Get Instruction
+		Instruction &instruction = instr_mem->get_instruction(PC);
+
+		// Increment PC
+		// TODO, PC should be incremented or decremented based on instruction
+		PC += 4;
+
+		/*
+			Step Three: Simulator related
+		*/
+		instruction.begin_exe = clk;
+		printf("addr:   %d\n", instruction.addr);
+		printf("instr:  "); printbin(instruction.instruction, 32);
+		printf("\n");
+
+		uint8_t ctrl, read1, read2, write;
+		uint32_t ig;
+		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig);
+		printf("ctrl:   "); printbin(ctrl, 7);
+		printf("read1:  "); printbin(read1, 5);
+		printf("read2:  "); printbin(read2, 5);
+		printf("write:  "); printbin(write, 5);
+		printf("immgen: "); printbin(ig, 32);
+		printf("\n");
+
+		uint64_t ig_out;
+		ig_out = immgen(ig);
+		printf("ig_out: ");
+		printbin(ig_out, 64);
+		printf("\n");
+
+		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
+		uint8_t aluop;
+		control(ctrl, &branch, &memread, &memtoreg, &aluop, &memwrite, 
+			&alusource, &regwrite);
+		printf("branch: "); printbin(branch, 1);
+		printf("memrd:  "); printbin(memread, 1);
+		printf("mem2rg: "); printbin(memtoreg, 1);
+		printf("aluop:  "); printbin(aluop, 2);
+		printf("memwt:  "); printbin(memwrite, 1);
+		printf("alusrc: "); printbin(alusource, 1);
+		printf("rgwt:   "); printbin(regwrite, 1);
+		printf("\n");
+
+		uint64_t data1, data2, wdata;
+		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
+		printf("data1:  "); printbin(data1, 64);
+		printf("data2:  "); printbin(data2, 64);
+		printf("\n");
+
+		uint64_t alu_muxin;
+		alu_muxin = mux64(data2, ig_out, alusource);
+		printf("alumux: "); printbin(alu_muxin, 64);
+
+		// Single-cycle always takes one clock cycle to complete
+		instruction.end_exe = clk + 1; 
+
+		printf("===========================================================================\n");
+	
+		pending_queue.push_back(instruction);
+	}
+
+	clk++;
+
+	/*
+		Step Four: Should we shut down simulator
+	*/
+	if (pending_queue.size() == 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+void Core::serve_pending_instrs()
+{
+	list<Instruction>::iterator instr = pending_queue.begin();
+
+	if (instr->end_exe <= clk)
+	{
+		printStats(instr);
+		
+		pending_queue.erase(instr);	
+	}
+}
+
+void Core::printStats(list<Instruction>::iterator &ite)
+{
+	*out << ite->raw_instr << " => ";
+	*out << "Core ID: " << id << "; ";
+	*out << "Begin Exe: " << ite->begin_exe << "; ";
+	*out << "End Exe: " << ite->end_exe << endl;
+}
+
+// Student CPU Blocks
+
 uint64_t Core::add64(uint64_t a, uint64_t b){
 	uint64_t result;
 	result = a + b;
@@ -93,134 +226,6 @@ void Core::imem(uint32_t instr, uint8_t *control, uint8_t *read1, uint8_t *read2
 	*immgen  = instr;
 
 }
-
-void Core::printbin(uint64_t n, int c) {
-	int j = c;
-	uint8_t temp[c];
-	while (j-- > 0) {
-    	if (n & 1) {
-        	temp[j] = 1;
-    	}
-    	else{
-        	temp[j] = 0;
-    	}
-
-    	n >>= 1;
-	}
-	uint8_t i;
-	for(i = 0; i < c; i++) {
-		printf("%d", temp[i]);
-	}
-	printf("\n");
-}
-
-bool Core::tick() {
-	/*
-		Step One: Serving pending instructions
-	*/
-	if (pending_queue.size() > 0)
-	{
-		serve_pending_instrs();
-	}
-	
-	/*
-		Step Two: Where simulation happens
-	*/
-	if (PC <= instr_mem->last_addr())
-	{
-		// Get Instruction
-		Instruction &instruction = instr_mem->get_instruction(PC);
-
-		// Increment PC
-		// TODO, PC should be incremented or decremented based on instruction
-		PC += 4;
-
-		/*
-			Step Three: Simulator related
-		*/
-		instruction.begin_exe = clk;
-		printf("instr:  "); printbin(instruction.instruction, 32);
-		printf("\n");
-
-		uint8_t ctrl, read1, read2, write;
-		uint32_t ig;
-		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig);
-		printf("ctrl:   "); printbin(ctrl, 7);
-		printf("read1:  "); printbin(read1, 5);
-		printf("read2:  "); printbin(read2, 5);
-		printf("write:  "); printbin(write, 5);
-		printf("immgen: "); printbin(ig, 32);
-		printf("\n");
-
-		uint64_t ig_out;
-		ig_out = immgen(ig);
-		printf("ig_out: ");
-		printbin(ig_out, 64);
-		printf("\n");
-
-		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
-		uint8_t aluop;
-		control(ctrl, &branch, &memread, &memtoreg, &aluop, &memwrite, 
-			&alusource, &regwrite);
-		printf("branch: "); printbin(branch, 1);
-		printf("memrd:  "); printbin(memread, 1);
-		printf("mem2rg: "); printbin(memtoreg, 1);
-		printf("aluop:  "); printbin(aluop, 2);
-		printf("memwt:  "); printbin(memwrite, 1);
-		printf("alusrc: "); printbin(alusource, 1);
-		printf("rgwt:   "); printbin(regwrite, 1);
-
-		uint64_t data1, data2, wdata;
-		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
-		printf("data1:  "); printbin(data1, 64);
-		printf("data2:  "); printbin(data2, 64);
-
-		
-
-		// Single-cycle always takes one clock cycle to complete
-		instruction.end_exe = clk + 1; 
-
-		printf("===========================================================================\n");
-	
-		pending_queue.push_back(instruction);
-	}
-
-	clk++;
-
-	/*
-		Step Four: Should we shut down simulator
-	*/
-	if (pending_queue.size() == 0)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
-}
-
-void Core::serve_pending_instrs()
-{
-	list<Instruction>::iterator instr = pending_queue.begin();
-
-	if (instr->end_exe <= clk)
-	{
-		printStats(instr);
-		
-		pending_queue.erase(instr);	
-	}
-}
-
-void Core::printStats(list<Instruction>::iterator &ite)
-{
-	*out << ite->raw_instr << " => ";
-	*out << "Core ID: " << id << "; ";
-	*out << "Begin Exe: " << ite->begin_exe << "; ";
-	*out << "End Exe: " << ite->end_exe << endl;
-}
-
-// Student CPU Blocks
 
 uint64_t Core::immgen(uint32_t instr) 
 {
