@@ -6,10 +6,7 @@ Core::Core(const string &fname, ofstream *out) : out(out),
 						clk(0), 
 						PC(0),
 						instr_mem(new Instruction_Memory(fname))
-{
-	int i;
-	for(i = 0; i < 32*8; i++) register_file[i] = 0;
-	for(i = 0; i < 32*8; i++) data_memory[i] = 0;
+{	
 }
 
 void Core::printbin(uint64_t n, int c) {
@@ -37,9 +34,7 @@ bool Core::tick() {
 		Step One: Serving pending instructions
 	*/
 	if (pending_queue.size() > 0)
-	{
 		serve_pending_instrs();
-	}
 	
 	/*
 		Step Two: Where simulation happens
@@ -153,7 +148,7 @@ bool Core::tick() {
 		// mux out the data we need to store in a register
 		// if the opcode requires it
 		wdata = mux64(alu_res, memval, memtoreg);
-		printf("wdata:  "); printbin(memval, 64);
+		printf("wdata:  "); printbin(wdata, 64);
 		printf("\n");
 
 		// check in on our register block one more time
@@ -166,9 +161,10 @@ bool Core::tick() {
 			printf("no data to be written.\n");
 		printf("\n");
 
+		PC = tmppc;
+
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
-		PC += 4;
 		printf("===========================================================================\n");
 	
 		pending_queue.push_back(instruction);
@@ -179,14 +175,7 @@ bool Core::tick() {
 	/*
 		Step Four: Should we shut down simulator
 	*/
-	if (pending_queue.size() == 0)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
+	return (pending_queue.size() != 0);
 }
 
 void Core::serve_pending_instrs()
@@ -251,7 +240,7 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 			// I-Format
 			*branch = 0;
 			*memread = 1;
-			*memtoreg = 1;
+			*memtoreg = 0;
 			*aluop = 0b00;
 			*memwrite = 0;
 			*alusource = 1;
@@ -364,8 +353,9 @@ uint8_t Core::alu_control(uint8_t aluop, uint8_t func3, uint8_t func7)
 		if(func7 == 0b0000000)
 		{
 			if(func3 == 0b000) return (uint8_t)0b0010;
-			if(func3 == 0b111) return (uint8_t)0b0000;
+			if(func3 == 0b001) return (uint8_t)0b0000; //???
 			if(func3 == 0b110) return (uint8_t)0b0001;
+			if(func3 == 0b111) return (uint8_t)0b0000;
 		}
 
 		if(func7 == 0b0100000 && func3 == 0b000)
@@ -391,30 +381,29 @@ uint64_t Core::alu(uint64_t a, uint64_t b, uint8_t control, bool *zero)
 }
 
 void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata, 
-		bool rwrite, uint64_t *data1, uint64_t *data2)
+    bool rwrite, uint64_t *data1, uint64_t *data2)
 {
-	*data1 = *((uint64_t*)(register_file+reg1));
-	*data2 = *((uint64_t*)(register_file+reg2));
+  	*data1 = register_file[reg1];
+  	*data2 = register_file[reg2];
 
-	if(rwrite){
-    	if(wreg <= 3) return;
-		// This will store little-endian 64 bit value in 8 8-bit chunks
-		uint8_t i;
-	    for(i = 0; i < 8; i++) {
-	        register_file[wreg] = (wdata & (0xffULL << 8*i)) >> 8*i;
-	    }
-	}
+  	if(rwrite){
+    	if(wreg == 0) return;
+		register_file[wreg] = wdata;   		
+ 	}
 }
 
 uint64_t Core::datmem(uint64_t addr, uint64_t wdata, bool read, bool write) 
 {
+	uint64_t rtn = 0;
 	if(read)
-		return *((uint64_t*)(data_memory+addr));
+		rtn = *(uint64_t*)(data_memory+addr);
 	if(write) {
 		// This will store little-endian 64 bit value in 8 8-bit chunks
+		uint8_t* bytes = (uint8_t*)&wdata;
 		uint8_t i;
 	    for(i = 0; i < 8; i++) {
-	        data_memory[addr] = (wdata & (0xffULL << 8*i)) >> 8*i;
+	        data_memory[addr + i] = bytes[i];
 	    }
 	}
+	return rtn;
 }

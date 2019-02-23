@@ -43,9 +43,10 @@ private:
 
 	// Student CPU Blocks
 
-	uint8_t register_file[32*8];
 
-	uint8_t data_memory[32*8];
+	uint64_t register_file[32] = {0};
+
+	uint8_t data_memory[32*8] = {0};
 
 	uint64_t add64(uint64_t a, uint64_t b);
 
