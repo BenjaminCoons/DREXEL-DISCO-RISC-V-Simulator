@@ -43,10 +43,15 @@ private:
 
 	// Student CPU Blocks
 
+	static constexpr int reg_file_size = 32;
+	static constexpr int data_memory_size = 32*8;
 
-	uint64_t register_file[32] = {0};
+	uint64_t register_file[reg_file_size] = {0};
+	bool active_registers[reg_file_size] = {0};
 
-	uint8_t data_memory[32*8] = {0};
+	uint8_t data_memory[data_memory_size] = {0};
+	bool active_memory[data_memory_size] = {0};
+
 
 	uint64_t add64(uint64_t a, uint64_t b);
 

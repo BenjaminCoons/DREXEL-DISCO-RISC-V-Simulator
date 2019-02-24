@@ -1,6 +1,7 @@
 #include "Core.h"
 
 #define DEBPRNT(x) printf("%s\n", x); fflush(stdout);
+// #define DEBUG_OUTPUT
 
 Core::Core(const string &fname, ofstream *out) : out(out), 
 						clk(0), 
@@ -50,16 +51,19 @@ bool Core::tick() {
 		*/
 
 		instruction.begin_exe = clk;
+        #ifdef DEBUG_OUTPUT
 		// initial addr and instruction
 		printf("addr:   %d\n", instruction.addr);
 		printf("instr:  "); printbin(instruction.instruction, 32);
 		printf("\n");
+        #endif
 
 		// split instruction into parts
 		uint8_t ctrl, read1, read2, write, func3, func7;
 		uint32_t ig;
 		imem(instruction.instruction, &ctrl, &read1, &read2, &write, &ig, &func3, &func7);
-		printf("ctrl:   "); printbin(ctrl, 7);
+		#ifdef DEBUG_OUTPUT
+        printf("ctrl:   "); printbin(ctrl, 7);
 		printf("read1:  "); printbin(read1, 5);
 		printf("read2:  "); printbin(read2, 5);
 		printf("write:  "); printbin(write, 5);
@@ -67,27 +71,33 @@ bool Core::tick() {
 		printf("func3:  "); printbin(func3, 3);
 		printf("func7:  "); printbin(func7, 7);
 		printf("\n");
+        #endif
 
 		// do any immediate processing
 		uint64_t ig_out;
 		ig_out = immgen(ig);
+        #ifdef DEBUG_OUTPUT
 		printf("ig_out: "); printbin(ig_out, 64);
 		printf("\n");
+        #endif
 
 		// left shift immediate and sum it with PC
 		// just in case we decide to branch later
 		uint64_t ls_ig, pcig_summed;
 		ls_ig = lshift64(ig_out, 1);
 		pcig_summed = add64(PC, ls_ig);
+        #ifdef DEBUG_OUTPUT
 		printf("ls_ig:  "); printbin(ls_ig, 64);
 		printf("pcigsm: "); printbin(pcig_summed, 64);
 		printf("\n");
+        #endif
 
 		// figure out what parts of the processor need to be active
 		bool branch, memread, memtoreg, memwrite, alusource, regwrite;
 		uint8_t aluop;
 		control(ctrl, &branch, &memread, &memtoreg, &aluop, &memwrite, 
 			&alusource, &regwrite);
+        #ifdef DEBUG_OUTPUT
 		printf("branch: "); printbin(branch, 1);
 		printf("memrd:  "); printbin(memread, 1);
 		printf("mem2rg: "); printbin(memtoreg, 1);
@@ -96,54 +106,69 @@ bool Core::tick() {
 		printf("alusrc: "); printbin(alusource, 1);
 		printf("rgwt:   "); printbin(regwrite, 1);
 		printf("\n");
+        #endif
 
 		// get the relevant data from src registers
 		uint64_t data1, data2, wdata;
 		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
-		printf("data1:  "); printbin(data1, 64);
+		#ifdef DEBUG_OUTPUT
+        printf("data1:  "); printbin(data1, 64);
 		printf("data2:  "); printbin(data2, 64);
 		printf("\n");
+        #endif
 
 		// mux the immediate value and second register output
 		// depending on the opcode
 		uint64_t alu_muxin;
 		alu_muxin = mux64(data2, ig_out, alusource);
+        #ifdef DEBUG_OUTPUT
 		printf("aluin2: "); printbin(alu_muxin, 64);
 		printf("\n");
+        #endif
 
 		// figure out how to trigger the ALU to do what we need
 		uint8_t alu_ctrl;
 		alu_ctrl = alu_control(aluop, func3, func7);
+        #ifdef DEBUG_OUTPUT
 		printf("aluctr: "); printbin(alu_ctrl, 4);
 		printf("\n");
+        #endif
 
 		// call the alu and check for zero result
 		bool zero;
 		uint64_t alu_res;
 		alu_res = alu(data1, alu_muxin, alu_ctrl, &zero);
-		printf("alu_rs: "); printbin(alu_res, 64);
+		#ifdef DEBUG_OUTPUT
+        printf("alu_rs: "); printbin(alu_res, 64);
 		printf("zero:   "); printbin(zero, 1); 
 		printf("\n");
+        #endif
 
 		// figure out whether or not we're going to branch
 		uint64_t pc_nxt;
 		pc_nxt = add64(PC, 4);
+        #ifdef DEBUG_OUTPUT
 		printf("pc_nxt: "); printbin(pc_nxt, 64);
 		printf("\n");
+        #endif
 
 		// Do the actual PC muxing
 		uint64_t pcmux_s, tmppc;
 		pcmux_s = and_gate(branch, zero);
 		tmppc = mux64(pc_nxt, pcig_summed, pcmux_s);
+        #ifdef DEBUG_OUTPUT
 		printf("pcmux: "); printbin(pcmux_s, 1);
 		printf("pcupdt: %d", tmppc);
 		printf("\n");
+        #endif
 
 		// retrieve any relevant data from the rest of the 
 		// system's memory
 		uint64_t memval;
 		memval = datmem(alu_res, data2, memread, memwrite);
+        #ifdef DEBUG_OUTPUT
 		printf("datmem: "); printbin(memval, 64);
+        #endif
 
 		// mux out the data we need to store in a register
 		// if the opcode requires it
@@ -152,31 +177,35 @@ bool Core::tick() {
         // if jal(r) instruction, mux in the program counter
         // to write to the appropriate register. 
         wdata = mux64(wdata, pc_nxt, ctrl == 0b1101111 || ctrl == 0b1100111);
-
+        #ifdef DEBUG_OUTPUT
 		printf("wdata:  "); printbin(wdata, 64);
+        #endif
 
         // check in on our register block one more time
         // and see if we need to write any data
         reg(read1, read2, write, wdata, regwrite, &data1, &data2);
+        #ifdef DEBUG_OUTPUT
         if(regwrite) {
             printf("writing wdata to reg "); printbin(write, 5);
         }
         else
             printf("no data to be written.\n");
         printf("\n");
+        #endif
 
         // calculate sum of immediate value and value stored
         // in rs1, then mux into PC for jalr command
         uint64_t igoffst;
         igoffst = add64(ig_out, data1);
 		PC = mux64(tmppc, igoffst, ctrl == 0b1100111);
+        #ifdef DEBUG_OUTPUT
         printf("igofst: "); printbin(igoffst, 64);
         printf("\n");
+        printf("===========================================================================\n");
+        #endif
 
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
-		printf("===========================================================================\n");
-	
 		pending_queue.push_back(instruction);
 	}
 
@@ -202,10 +231,27 @@ void Core::serve_pending_instrs()
 
 void Core::printStats(list<Instruction>::iterator &ite)
 {
-	*out << ite->raw_instr << " => ";
+	*out << ite->raw_instr << " => " << endl;
 	*out << "Core ID: " << id << "; ";
-	*out << "Begin Exe: " << ite->begin_exe << "; ";
-	*out << "End Exe: " << ite->end_exe << endl;
+	*out << "Begin Exe: " << ite->begin_exe << "; " << endl;
+
+    *out << "==========REGISTER_FILE==========" << endl;
+    uint16_t i;
+    for(i = 0; i < reg_file_size; i++) {
+        if(active_registers[i])
+            *out << "Reg x" << dec << i << ": " << register_file[i] << endl;
+    }
+    *out << "=================================" << endl;
+
+
+    *out << "===========DATA_MEMORY===========" << endl;
+    for(i = 0; i < data_memory_size; i++) {
+        if(active_memory[i])
+            *out << "Mem (" << hex << i << "): " << data_memory[i] << endl;
+    }
+    *out << "=================================" << endl;
+
+	*out << "End Exe: " << ite->end_exe << " <=" << endl << endl;
 }
 
 // Student CPU Blocks
@@ -435,6 +481,11 @@ uint64_t Core::alu(uint64_t a, uint64_t b, uint8_t control, bool *zero)
 void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata, 
     bool rwrite, uint64_t *data1, uint64_t *data2)
 {
+    // activate registers for tracking in output file
+    active_registers[reg1] = true;
+    active_registers[reg2] = true;
+    active_registers[wreg] = true;
+
   	*data1 = register_file[reg1];
   	*data2 = register_file[reg2];
 
@@ -446,14 +497,18 @@ void Core::reg(uint8_t reg1, uint8_t reg2, uint8_t wreg, uint64_t wdata,
 
 uint64_t Core::datmem(uint64_t addr, uint64_t wdata, bool read, bool write) 
 {
-	uint64_t rtn = 0;
-	if(read)
-		rtn = *(uint64_t*)(data_memory+addr);
-	if(write) {
-		// This will store little-endian 64 bit value in 8 8-bit chunks
-		uint8_t* bytes = (uint8_t*)&wdata;
-		uint8_t i;
-	    for(i = 0; i < 8; i++) {
+
+    uint64_t rtn = 0;
+    if(read)
+        rtn = *(uint64_t*)(data_memory+addr);
+    if(write) {
+        // This will store little-endian 64 bit value in 8 8-bit chunks
+        uint8_t* bytes = (uint8_t*)&wdata;
+        uint8_t i;
+        for(i = 0; i < 8; i++) {
+            // activate memory for tracking in output file
+            active_memory[addr + i] = true;
+
 	        data_memory[addr + i] = bytes[i];
 	    }
 	}
