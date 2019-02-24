@@ -117,7 +117,7 @@ bool Core::tick() {
 		printf("aluctr: "); printbin(alu_ctrl, 4);
 		printf("\n");
 
-		// math it up! run the alu and check for zero result
+		// call the alu and check for zero result
 		bool zero;
 		uint64_t alu_res;
 		alu_res = alu(data1, alu_muxin, alu_ctrl, &zero);
@@ -148,20 +148,30 @@ bool Core::tick() {
 		// mux out the data we need to store in a register
 		// if the opcode requires it
 		wdata = mux64(alu_res, memval, memtoreg);
+
+        // if jal(r) instruction, mux in the program counter
+        // to write to the appropriate register. 
+        wdata = mux64(wdata, pc_nxt, ctrl == 0b1101111 || ctrl == 0b1100111);
+
 		printf("wdata:  "); printbin(wdata, 64);
-		printf("\n");
 
-		// check in on our register block one more time
-		// and see if we need to write any data
-		reg(read1, read2, write, wdata, regwrite, &data1, &data2);
-		if(regwrite) {
-			printf("writing wdata to reg "); printbin(write, 5);
-		}
-		else
-			printf("no data to be written.\n");
-		printf("\n");
+        // check in on our register block one more time
+        // and see if we need to write any data
+        reg(read1, read2, write, wdata, regwrite, &data1, &data2);
+        if(regwrite) {
+            printf("writing wdata to reg "); printbin(write, 5);
+        }
+        else
+            printf("no data to be written.\n");
+        printf("\n");
 
-		PC = tmppc;
+        // calculate sum of immediate value and value stored
+        // in rs1, then mux into PC for jalr command
+        uint64_t igoffst;
+        igoffst = add64(ig_out, data1);
+		PC = mux64(tmppc, igoffst, ctrl == 0b1100111);
+        printf("igofst: "); printbin(igoffst, 64);
+        printf("\n");
 
 		// Single-cycle always takes one clock cycle to complete
 		instruction.end_exe = clk + 1; 
@@ -231,55 +241,76 @@ void Core::control(uint8_t instr, bool *branch, bool *memread, bool *memtoreg,
 		uint8_t *aluop, bool *memwrite, bool *alusource, bool *regwrite){
 
 	switch(instr) {
-		case 0b0000011:
-		case 0b0001111:
-		case 0b0010011:
-		case 0b0011011:
-		case 0b1100111:
-		case 0b1110011: 
-			// I-Format
-			*branch = 0;
-			*memread = 1;
-			*memtoreg = 0;
-			*aluop = 0b00;
-			*memwrite = 0;
-			*alusource = 1;
-			*regwrite = 1;
-			break;
-		case 0b0010111:
-		case 0b0110111: //U-type
-			return;  //TODO implement u type
-			break;
-		case 0b1101111: //UJ-type
-			return;  //TODO implement uj type
-			break;
-		case 0b0100011: //S-type
-			// S-Format
-			*branch = 0;
-			*memread = 0;
-			*aluop = 0b00;
-			*memwrite = 1;
-			*alusource = 1;
-			*regwrite = 0;
-			break;
-		case 0b1100011: //SB-type
-			// SB-Format
-			*branch = 1;
-			*memread = 0;
-			*aluop = 0b01;
-			*memwrite = 0;
-			*alusource = 0;
-			*regwrite = 0;
-			break;
+        case 0b0000011: 
+            // ld
+            *branch = 0;
+            *memread = 1;
+            *memtoreg = 1;
+            *aluop = 0b00;
+            *memwrite = 0;
+            *alusource = 1;
+            *regwrite = 1;
+            break;
+        case 0b0010011: 
+            // addi, slli, xori, srli, ori, andi
+            *branch = 0;
+            *memread = 0;
+            *memtoreg = 0;
+            *aluop = 0b10;
+            *memwrite = 0;
+            *alusource = 1;
+            *regwrite = 1;
+            break;
+        case 0b0100011: 
+            // sd
+            *branch = 0;
+            *memread = 0;
+            *memtoreg = 0;
+            *aluop = 0b00;
+            *memwrite = 1;
+            *alusource = 1;
+            *regwrite = 0;
+            break;
+        case 0b0110011: 
+            // add, sub, sll, xor, srl, or, and
+            *branch = 0;
+            *memread = 0;
+            *memtoreg = 0;
+            *aluop = 0b10;
+            *memwrite = 0;
+            *alusource = 0;
+            *regwrite = 1;
+            break;
+        case 0b1100011: 
+            // beq, bne, blt, bge
+            *branch = 1;
+            *memread = 0;
+            *memtoreg = 0;
+            *aluop = 0b01;
+            *memwrite = 0;
+            *alusource = 0;
+            *regwrite = 0;
+            break;
+        case 0b1101111: 
+        case 0b1100111:
+            // jal, jalr
+            *branch = 1;
+            *memread = 0;
+            *memtoreg = 0;
+            *aluop = 0b00;
+            *memwrite = 0;
+            *alusource = 1;
+            *regwrite = 1;
+            break;
 		default:
-			// R-Format
+            // bad instr
 			*branch = 0;
 			*memread = 0;
 			*memtoreg = 0;
-			*aluop = 0b10;
+			*aluop = 0b00;
 			*memwrite = 0;
 			*alusource = 0;
-			*regwrite = 1;
+			*regwrite = 0;
 			break;
 	}
 }
@@ -304,7 +335,6 @@ uint64_t Core::immgen(uint32_t instr)
 	uint64_t temp;
 	switch(instr & 0b1111111) {
 		case 0b0000011:
-		case 0b0001111:
 		case 0b0010011:
 		case 0b0011011:
 		case 0b1100111:
@@ -318,7 +348,12 @@ uint64_t Core::immgen(uint32_t instr)
 			return 0;  //TODO implement u type
 			break;
 		case 0b1101111: //UJ-type
-			return 0;  //TODO implement uj type
+			temp = (((uint64_t)instr >> 21) & 0b1111111111)
+                 + ((((uint64_t)instr >> 20) & 0b1) << 10)
+                 + ((((uint64_t)instr >> 12) & 0b11111111) << 11)
+                 + ((((uint64_t)instr >> 31) & 0b1) << 19); 
+            if((uint8_t)(temp >> 19) & 0b1)
+                temp |= (one_extend - 0xff000);
 			break;
 		case 0b0100011: //S-type
 			temp = (((uint64_t)instr >> 7) & 0b11111) 
@@ -327,8 +362,7 @@ uint64_t Core::immgen(uint32_t instr)
 				temp |= one_extend;
 			break;
 		case 0b1100011: //SB-type
-			//1 111111 00000 00000 000 1100 1 1100011
-			temp = ((((uint64_t)instr >> 8) & 0b1111))
+			temp = (((uint64_t)instr >> 8) & 0b1111)
 			     + ((((uint64_t)instr >> 25) & 0b111111) << 4)
 			     + ((((uint64_t)instr >> 7) & 0b1) << 10)
 			     + (((uint64_t)instr >> 31) << 11); 
@@ -345,38 +379,56 @@ uint64_t Core::immgen(uint32_t instr)
 
 uint8_t Core::alu_control(uint8_t aluop, uint8_t func3, uint8_t func7)
 {
-	if((aluop & 0b11) == 0b00) return (uint8_t)0b0010;
-	if(aluop & 0b1)            return (uint8_t)0b0110;
+    // aluop 
+    // 00 = addi, slli, srli
+    // 01 = beq, bne, bge, blt 
+    // 10 = add, sub, subi, mul, muli, div, divi, sll, srl
 
-	if((aluop >> 1) & 0b1)
-	{
-		if(func7 == 0b0000000)
-		{
-			if(func3 == 0b000) return (uint8_t)0b0010;
-			if(func3 == 0b001) return (uint8_t)0b0000; //???
-			if(func3 == 0b110) return (uint8_t)0b0001;
-			if(func3 == 0b111) return (uint8_t)0b0000;
-		}
+    if(aluop & 0b00) return 0b0010;
+    if(aluop & 0b01)  
+    {
+        if(func3 == 0b000) return 0b0110; // beq
+        if(func3 == 0b001) return 0b1110; // bne
+        if(func3 == 0b010) return 0b1011; // blt
+        if(func3 == 0b011) return 0b0011; // bge
+    }
+    if(aluop & 0b10)  
+    {
+        if(func7 == 0b0100000) return 0b0110; // sub
 
-		if(func7 == 0b0100000 && func3 == 0b000)
-			return (uint8_t)0b0110;
-	}
+        if(func3 == 0b000) return 0b0010; // add
+        if(func3 == 0b001) return 0b0111; // sll
+        if(func3 == 0b100) return 0b0100; // xor
+        if(func3 == 0b101) return 0b0101; // srl
+        if(func3 == 0b110) return 0b0001; // or
+        if(func3 == 0b111) return 0b0000; // and
+    }
+    if(aluop & 0b11) return 0b0000;
 
-	return (uint8_t)0b0000;
+	return 0b0000;
 
 }
 
 uint64_t Core::alu(uint64_t a, uint64_t b, uint8_t control, bool *zero)
 {
 	uint64_t temp = 0;
-	switch(control & 0b1111)
+	switch(control & 0b111)
 	{
-		case 0b0000: temp = a & b; break;
-		case 0b0001: temp = a | b; break;
-		case 0b0010: temp = a + b; break;
-		case 0b0110: temp = a - b; break;
-	}
-	*zero = (temp == 0);
+		case 0b000: temp = a & b; break;
+		case 0b001: temp = a | b; break;
+		case 0b010: temp = a + b; break;
+        case 0b011: temp = a < b; break;
+        case 0b100: temp = a ^ b;  break;
+        case 0b101: temp = a >> b; break;
+		case 0b110: temp = a - b;  break;
+        case 0b111: temp = a << b; break;
+    }
+    
+    *zero = (temp == 0); // beq, bgt
+
+    if(control & 0b1000) // bne, blt
+        *zero = !*zero;
+
 	return temp;
 }
 

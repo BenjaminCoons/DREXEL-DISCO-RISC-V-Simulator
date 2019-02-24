@@ -58,7 +58,7 @@ Assembler::Assembler(Instruction_Memory *instr_mem, const string trace_fname) :
 	
 	// jalr
 	opr_to_opcode.insert(pair<string, int>("jalr", 103));
-        opr_to_funct3.insert(pair<string, int>("jalr", 0));
+    opr_to_funct3.insert(pair<string, int>("jalr", 0));
 
 	/*
 		S-type instructions
