@@ -1,0 +1,6950 @@
+add x10, x8, x0 => 
+Core ID: 0; Begin Exe: 0; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x8: 0
+Reg x10: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 1 <=
+
+add x11, x0, x0 => 
+Core ID: 0; Begin Exe: 1; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 2 <=
+
+add x12, x0, x0 => 
+Core ID: 0; Begin Exe: 2; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 3 <=
+
+addi x13, x13, 4 => 
+Core ID: 0; Begin Exe: 3; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 4 <=
+
+jal x1, 28 => 
+Core ID: 0; Begin Exe: 4; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 5 <=
+
+lw x21, 0(x10) => 
+Core ID: 0; Begin Exe: 5; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 6 <=
+
+add x21, x0, x0 => 
+Core ID: 0; Begin Exe: 6; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 7 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 7; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 8 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 8; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 9 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 9; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 10 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 10; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 11 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 11; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 12 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 12; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 20
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 13 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 13; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 14 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 14; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 15 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 15; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 16 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 16; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 17 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 17; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 18 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 18; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 19 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 19; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 20 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 20; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 21 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 21; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 22 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 22; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 23 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 23; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 24 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 24; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 25 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 25; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 26 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 26; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 27 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 27; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 1
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 28 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 28; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 1
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 29 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 29; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 1
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 30 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 30; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 1
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 31 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 31; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 1
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 32 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 32; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 33 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 33; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 34 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 34; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 35 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 35; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 36 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 36; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 37 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 37; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 38 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 38; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 39 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 39; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 40 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 40; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 41 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 41; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 42 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 42; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 43 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 43; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 2
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 44 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 44; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 2
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 45 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 45; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 2
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 46 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 46; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 2
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 47 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 47; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 2
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 48 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 48; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 49 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 49; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 50 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 50; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 51 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 51; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 52 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 52; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 53 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 53; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 54 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 54; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 55 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 55; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 56 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 56; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 57 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 57; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 58 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 58; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 59 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 59; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 3
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 60 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 60; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 3
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 61 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 61; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 3
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 62 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 62; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 3
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 63 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 63; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 3
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 64 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 64; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 65 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 65; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 66 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 66; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 67 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 67; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 68 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 68; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 69 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 69; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 70 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 70; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 71 <=
+
+add x12, x0, x0 => 
+Core ID: 0; Begin Exe: 71; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 0
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 72 <=
+
+addi x10, x10, 4 => 
+Core ID: 0; Begin Exe: 72; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 0
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 73 <=
+
+addi x11, x11, 1 => 
+Core ID: 0; Begin Exe: 73; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 74 <=
+
+blt x11, x13, -60 => 
+Core ID: 0; Begin Exe: 74; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 75 <=
+
+lw x21, 0(x10) => 
+Core ID: 0; Begin Exe: 75; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 76 <=
+
+add x21, x0, x0 => 
+Core ID: 0; Begin Exe: 76; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 77 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 77; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 78 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 78; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 79 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 79; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 80 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 80; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 81 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 81; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 82 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 82; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 83 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 83; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 84 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 84; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 85 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 85; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 86 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 86; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 87 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 87; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 88 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 88; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 89 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 89; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 90 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 90; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 91 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 91; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 92 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 92; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 93 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 93; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 94 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 94; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 95 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 95; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 96 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 96; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 97 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 97; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 5
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 98 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 98; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 5
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 99 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 99; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 5
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 100 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 100; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 5
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 101 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 101; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 5
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 102 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 102; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 103 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 103; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 104 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 104; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 105 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 105; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 106 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 106; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 107 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 107; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 108 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 108; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 109 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 109; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 110 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 110; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 111 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 111; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 112 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 112; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 113 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 113; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 6
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 114 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 114; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 6
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 115 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 115; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 6
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 116 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 116; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 6
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 117 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 117; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 6
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 118 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 118; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 119 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 119; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 120 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 120; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 121 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 121; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 122 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 122; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 123 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 123; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 124 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 124; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 125 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 125; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 126 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 126; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 127 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 127; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 128 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 128; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 4
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 129 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 129; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 7
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 130 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 130; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 7
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 131 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 131; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 7
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 132 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 132; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 7
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 133 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 133; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 7
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 134 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 134; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 135 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 135; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 136 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 136; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 137 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 137; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 138 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 138; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 139 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 139; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 140 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 140; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 141 <=
+
+add x12, x0, x0 => 
+Core ID: 0; Begin Exe: 141; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 4
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 142 <=
+
+addi x10, x10, 4 => 
+Core ID: 0; Begin Exe: 142; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 1
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 143 <=
+
+addi x11, x11, 1 => 
+Core ID: 0; Begin Exe: 143; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 144 <=
+
+blt x11, x13, -60 => 
+Core ID: 0; Begin Exe: 144; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 145 <=
+
+lw x21, 0(x10) => 
+Core ID: 0; Begin Exe: 145; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 146 <=
+
+add x21, x0, x0 => 
+Core ID: 0; Begin Exe: 146; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 147 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 147; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 148 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 148; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 149 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 149; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 150 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 150; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 151 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 151; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 152 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 152; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 153 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 153; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 154 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 154; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 155 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 155; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 156 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 156; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 157 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 157; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 158 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 158; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 159 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 159; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 160 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 160; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 161 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 161; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 162 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 162; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 163 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 163; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 164 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 164; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 165 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 165; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 166 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 166; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 167 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 167; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 9
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 168 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 168; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 9
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 169 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 169; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 9
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 170 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 170; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 9
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 171 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 171; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 9
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 172 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 172; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 173 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 173; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 174 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 174; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 175 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 175; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 176 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 176; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 177 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 177; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 178 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 178; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 179 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 179; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 180 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 180; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 181 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 181; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 182 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 182; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 183 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 183; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 10
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 184 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 184; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 10
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 185 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 185; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 10
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 186 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 186; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 10
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 187 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 187; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 10
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 188 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 188; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 189 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 189; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 190 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 190; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 191 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 191; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 192 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 192; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 193 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 193; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 194 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 194; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 195 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 195; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 196 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 196; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 197 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 197; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 198 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 198; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 8
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 199 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 199; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 11
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 200 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 200; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 11
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 201 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 201; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 11
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 202 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 202; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 11
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 203 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 203; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 11
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 204 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 204; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 205 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 205; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 206 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 206; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 207 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 207; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 208 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 208; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 209 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 209; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 210 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 210; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 211 <=
+
+add x12, x0, x0 => 
+Core ID: 0; Begin Exe: 211; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 8
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 212 <=
+
+addi x10, x10, 4 => 
+Core ID: 0; Begin Exe: 212; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 2
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 213 <=
+
+addi x11, x11, 1 => 
+Core ID: 0; Begin Exe: 213; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 214 <=
+
+blt x11, x13, -60 => 
+Core ID: 0; Begin Exe: 214; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 215 <=
+
+lw x21, 0(x10) => 
+Core ID: 0; Begin Exe: 215; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 216 <=
+
+add x21, x0, x0 => 
+Core ID: 0; Begin Exe: 216; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 217 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 217; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 218 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 218; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 219 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 219; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 220 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 220; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 221 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 221; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 222 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 222; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 223 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 223; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 224 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 224; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 225 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 225; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 226 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 226; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 227 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 227; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 228 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 228; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 229 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 229; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 230 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 230; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 231 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 231; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 232 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 232; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 233 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 233; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 234 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 234; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 235 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 235; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 236 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 236; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 237 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 237; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 13
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 238 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 238; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 13
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 239 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 239; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 13
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 240 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 240; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 13
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 241 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 241; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 13
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 242 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 242; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 243 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 243; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 244 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 244; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 245 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 245; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 246 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 246; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 1
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 247 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 247; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 248 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 248; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 249 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 249; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 250 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 250; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 251 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 251; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 252 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 252; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 253 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 253; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 14
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 254 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 254; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 14
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 255 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 255; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 14
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 256 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 256; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 14
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 257 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 257; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 14
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 258 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 258; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 259 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 259; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 260 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 260; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 261 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 261; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 262 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 262; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 2
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 263 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 263; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 264 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 264; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 265 <=
+
+addi x2, x2, -12 => 
+Core ID: 0; Begin Exe: 265; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 266 <=
+
+sw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 266; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 267 <=
+
+sw x11, 4(x2) => 
+Core ID: 0; Begin Exe: 267; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 268 <=
+
+slli x28, x11, 2 => 
+Core ID: 0; Begin Exe: 268; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 12
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 269 <=
+
+add x28, x28, x12 => 
+Core ID: 0; Begin Exe: 269; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 15
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 270 <=
+
+sw x28, 0(x2) => 
+Core ID: 0; Begin Exe: 270; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 15
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 271 <=
+
+jal x1, -56 => 
+Core ID: 0; Begin Exe: 271; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 15
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 272 <=
+
+lw x30, 0(x2) => 
+Core ID: 0; Begin Exe: 272; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 15
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 273 <=
+
+lw x31, 4(x2) => 
+Core ID: 0; Begin Exe: 273; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 15
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 274 <=
+
+sll x28, x30, x31 => 
+Core ID: 0; Begin Exe: 274; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 275 <=
+
+lw x1, 8(x2) => 
+Core ID: 0; Begin Exe: 275; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 18446744073709551604
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 276 <=
+
+addi x2, x2, 12 => 
+Core ID: 0; Begin Exe: 276; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 277 <=
+
+jalr x0, 0(x1) => 
+Core ID: 0; Begin Exe: 277; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 278 <=
+
+add x21, x21, x28 => 
+Core ID: 0; Begin Exe: 278; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 3
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 279 <=
+
+addi x12, x12, 1 => 
+Core ID: 0; Begin Exe: 279; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 280 <=
+
+blt x12, x13, -36 => 
+Core ID: 0; Begin Exe: 280; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 4
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 281 <=
+
+add x12, x0, x0 => 
+Core ID: 0; Begin Exe: 281; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 12
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 282 <=
+
+addi x10, x10, 4 => 
+Core ID: 0; Begin Exe: 282; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 16
+Reg x11: 3
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 283 <=
+
+addi x11, x11, 1 => 
+Core ID: 0; Begin Exe: 283; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 16
+Reg x11: 4
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 284 <=
+
+blt x11, x13, -60 => 
+Core ID: 0; Begin Exe: 284; 
+==========REGISTER_FILE==========
+Reg x0: 0
+Reg x1: 80
+Reg x2: 0
+Reg x4: 0
+Reg x5: 0
+Reg x8: 0
+Reg x9: 0
+Reg x10: 16
+Reg x11: 4
+Reg x12: 0
+Reg x13: 4
+Reg x20: 0
+Reg x21: 0
+Reg x28: 0
+Reg x29: 0
+Reg x30: 0
+Reg x31: 0
+=================================
+===========DATA_MEMORY===========
+=================================
+End Exe: 285 <=
+
