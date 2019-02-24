@@ -1,27 +1,10 @@
-add x10, x8, x0
-add x11, x0, x0
 add x12, x0, x0
-addi x13, x13, 4
-jal x1, 28
-lw x30, 0(x2)
-lw x31, 4(x2)
-sll x28, x30, x31
-lw x1, 8(x2)
-addi x2, x2, 12
-jalr x0, 0(x1)
-lw x21, 0(x10)
-add x21, x0, x0
-addi x2, x2, -12
-sw x1, 8(x2)
-sw x11, 4(x2)
-slli x28, x11, 2
-add x28, x28, x12
-sw x28, 0(x2)
-jal x1, -56
-add x21, x21, x28
-addi x12, x12, 1
-blt x12, x13, -36
-add x12, x0, x0
-addi x10, x10, 4
-addi x11, x11, 1
-blt x11, x13, -60
+add x13, x0, x0
+addi x14, x0, 4
+addi x15, x0, 4
+add x14, x14, x13
+slli x16, x14, 1
+add x12, x12, x16
+addi x13, x13, 1
+add x16, x0, x0
+blt x13, x15, -20
