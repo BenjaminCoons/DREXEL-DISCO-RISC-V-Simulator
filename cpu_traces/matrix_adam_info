@@ -1,0 +1,24 @@
+&0 = int* mat
+&4 = int* mat+1
+...
+&60 = int* mat+15
+
+&64 = int* out
+&68 = int* out+2
+...
+&124 = int* out+15
+
+x8 = return to addr
+x14 = shift.val
+x15 = shift.scale
+x10 = return value
+
+x12 = matrix.mat
+x13 matrix.out
+x18 = i
+x19 = 4
+x20 = j
+x5 = out[i]
+x6 = i * 4 + j
+x7 = mat[x6]
+x28 = out[i]+shift
