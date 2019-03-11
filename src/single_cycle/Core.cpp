@@ -430,7 +430,7 @@ uint8_t Core::alu_control(uint8_t aluop, uint8_t func3, uint8_t func7)
     // 01 = beq, bne, bge, blt 
     // 10 = add, sub, subi, mul, muli, div, divi, sll, srl
 
-    if(aluop & 0b00) return 0b0010;
+    if(aluop == 0b00) return 0b0010;
     if(aluop & 0b01)  
     {
         if(func3 == 0b000) return 0b0110; // beq
