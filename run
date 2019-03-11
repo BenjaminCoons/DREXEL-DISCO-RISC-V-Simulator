@@ -1,0 +1,1 @@
+./RVSim ./configs/RISC_V.cfg ./out/test ./cpu_traces/cpu_traces_core_0 ./cpu_traces/cpu_traces_core_1 ./cpu_traces/cpu_traces_core_2 ./cpu_traces/cpu_traces_core_3 
